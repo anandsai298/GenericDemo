@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericDemo
 {
-    public class GenericMethod
+    public class GenericMethod<T> where T : IComparable//generic Class
     {
         public void Print<T>(T[] arr)
         {
@@ -15,15 +15,23 @@ namespace GenericDemo
                 Console.WriteLine(data);
             }
         }
-        //Generic method
-        public void FindMax<T>(T a, T b,T c) where T : IComparable//Icomparable is inbuilt to have the compareto method
+        //constructor
+        public T a, b, c;
+        public GenericMethod(T a, T b, T c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+    
+        public void FindMax() 
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
-                Console.WriteLine(a + " is max string value");
+                Console.WriteLine(a + " is max value");
             if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
-                Console.WriteLine(b + " is max string value");
+                Console.WriteLine(b + " is max value");
             else
-                Console.WriteLine(c + "is max string value");
+                Console.WriteLine(c + "is max value");
         }
     }
 }
