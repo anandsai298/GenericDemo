@@ -16,18 +16,19 @@ namespace GenericDemo
             normalDemo.print(doubleArr);
             normalDemo.print(charArr);
 
-            //GenericMethod genericMethod = new GenericMethod();
-            //genericMethod.Print<int>(intArr);
-            //genericMethod.Print<double>(doubleArr);
-            //genericMethod.Print<char>(charArr);
-            //genericMethod.Print<float>(Float);
+            Console.WriteLine("with generic method");
+            GenericMethod genericMethod = new GenericMethod();
+            genericMethod.Print<int>(intArr);
+            genericMethod.Print<double>(doubleArr);
+            genericMethod.Print<char>(charArr);
+            genericMethod.Print<float>(Float);
 
             Console.WriteLine("with generic method Max Value:");
-            GenericMethod <int>genericInt = new GenericMethod<int>(10,20,50);
+            GenericMax<int>genericInt = new GenericMax<int>(10,20,50);
             genericInt.FindMax();
-            GenericMethod<float> genericFloat = new GenericMethod<float>(10.25f, 20.54f, 50.55f);
+            GenericMax<float> genericFloat = new GenericMax<float>(10.25f, 20.54f, 50.55f);
             genericFloat.FindMax();
-            GenericMethod<string> genericString = new GenericMethod<string>("ask","sai","anand");
+            GenericMax<string> genericString = new GenericMax<string>("ask","sai","anand");
             genericString.FindMax();
 
             Console.WriteLine("without generic method Max Value:");
